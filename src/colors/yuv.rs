@@ -13,13 +13,6 @@ impl YUV {
         let cg = r * (-0.25) + g * 0.5 + b * (-0.25);
         let co = r * 0.5  + b * (-0.5);
         YUV { y: yy, u: cg, v: co }
-        //////////////////
-        //~ let (r, g, b) = (rgb[0] as i32, rgb[1] as i32, rgb[2] as i32);
-        
-        //~ let yy: i32 = (r >>2) + (g >>1) + (b >>2);
-        //~ let cg: i32 = -(r >>2) + (g >>1) - (b >>2);
-        //~ let co: i32 = (r >>1) - (b >>1);
-        //~ YUV { y: yy as f64, u: cg as f64, v: co as f64 }
     }
     pub fn to_rgb(&self) -> (u8, u8, u8) {
         let y = self.y;

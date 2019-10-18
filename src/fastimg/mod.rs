@@ -9,8 +9,8 @@ extern crate rayon;
 
 use image::{Rgb, RgbImage};
 //~ use rayon::prelude::*;
-use super::hsl::HSL;
-use super::yuv::YUV;
+use super::colors::hsl::HSL;
+use super::colors::yuv::YUV;
 
 fn hsl_rank(clr: image::Rgb<u8>)-> image::Rgb<u8> {
     let rgb_in = [clr[0],clr[1],clr[2]];
